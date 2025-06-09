@@ -25,7 +25,7 @@ class Guild(models.Model):
 
     def __str__(self) -> str:
         return (f"(guild_name) {self.name}: "
-                f"{self.description or "No description"}")
+                f"{self.description or 'No description'}")
 
 
 class Player(models.Model):
@@ -39,4 +39,4 @@ class Player(models.Model):
     def __str__(self) -> str:
         return (f"(player_name) {self.nickname}: {self.bio}"
                 f"on {self.race.name}"
-                f"with {self.guild.name if self.guild else "No guild"}")
+                f"with {self.guild.name if self.guild else 'No guild'}")
